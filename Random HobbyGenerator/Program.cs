@@ -2,12 +2,13 @@
 {
     internal class RandomHobbies
     {
-        Random num = new();
-        string[] Hobbies = {"Darts", "Martial Arts", "Magician", "Fishing","Whistling", "Swimming","Running", "Rollerskating", "Shooting"};
+      
 
 
-    public void Run()
+    static void Run()
         {
+            Random num = new();
+            string[] Hobbies = { "Darts", "Martial Arts", "Magician", "Fishing", "Whistling", "Swimming", "Running", "Rollerskating", "Shooting" };
             int randomNum = num.Next(Hobbies.Length);
             string resultHobbies = Hobbies[randomNum];
 
@@ -20,8 +21,7 @@
         {
             do
             {
-                var launch = new RandomHobbies();
-                launch.Run();
+                Run();
                 Console.WriteLine("Would you like a new hobby? (y/n)");
                 string answer = Console.ReadLine();
                 if (answer != "y")
